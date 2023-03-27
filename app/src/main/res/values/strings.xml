@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FeatureTesting</string>
+    <string name="take_photo">Сделать фото</string>
+    <string name="start_capture">Сделать видео</string>
+</resources>
