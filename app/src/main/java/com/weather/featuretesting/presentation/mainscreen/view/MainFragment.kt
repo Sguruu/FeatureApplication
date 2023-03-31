@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.weather.featuretesting.R
 import com.weather.featuretesting.presentation.cameraX.base.view.CameraXFragment
 import com.weather.featuretesting.presentation.checkvpn.view.CheckVpnFragment
+import com.weather.featuretesting.presentation.custom_view.base.view.CustomViewFragment
 import com.weather.featuretesting.presentation.mainscreen.basic.fragment.FragmentLog
 import com.weather.featuretesting.presentation.mainscreen.model.FeatureModel
 import com.weather.featuretesting.presentation.mainscreen.view.recycler.FeatureListAdapter
@@ -51,6 +52,12 @@ class MainFragment : FragmentLog(R.layout.fragment_main) {
             FeatureModel.CAMERAX -> {
                 parentFragmentManager.commit {
                     replace<CameraXFragment>(R.id.fragment_container_view)
+                    addToBackStack(null)
+                }
+            }
+            FeatureModel.CUSTOM_VIEW -> {
+                parentFragmentManager.commit {
+                    replace<CustomViewFragment>(R.id.fragment_container_view)
                     addToBackStack(null)
                 }
             }
